@@ -13,7 +13,7 @@ We've used custom events already, but let's look at using jqLite to add events t
 
 ## jqLite events
 
-jqLite allows us to use `.on` and `.off` on our `element` inside the link function. `.off()` will remove all event listeners that we've added to the element, and `.on` let's us add them for different event types, such as `click`.
+jqLite allows us to use `.on` and `.off` on our `element` inside the link function. `.off()` will remove all event listeners that we've added to the element, and `.on` lets us add them for different event types, such as `click`.
 
 If we don't unbind our events, we may suffer with issues later down the line as our element will no longer exist but our event callbacks may still be fired. If we're updating our element inside of our callback, we will get errors because the element no longer exists.
 
@@ -41,7 +41,7 @@ angular
   .directive('ourDirective', ourDirective);
 ```
 
-Awesome! Now we can add native DOM events to our element. Here we can also target `window`, and `document`, etc, as we might have to change our directives behaviour when the browser resizes or when the user scrolls the page. But how do we know when to unbind these events?
+Awesome! Now we can add native DOM events to our element. Here we can also target `window`, and `document`, etc, as we might have to change our directives behavior when the browser resizes or when the user scrolls the page. But how do we know when to unbind these events?
 
 ## $destroy
 
